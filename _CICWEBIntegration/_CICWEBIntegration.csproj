@@ -25,6 +25,7 @@
     <UseGlobalApplicationHostFile />
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
+    <WcfConfigValidationEnabled>True</WcfConfigValidationEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -44,19 +45,68 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.AI.Agent.Intercept, Version=1.2.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.Agent.Intercept.1.2.1\lib\net45\Microsoft.AI.Agent.Intercept.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.DependencyCollector, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.DependencyCollector.2.0.0\lib\net45\Microsoft.AI.DependencyCollector.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.PerfCounterCollector, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.PerfCounterCollector.2.0.0\lib\net45\Microsoft.AI.PerfCounterCollector.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.ServerTelemetryChannel, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.WindowsServer.TelemetryChannel.2.0.0\lib\net45\Microsoft.AI.ServerTelemetryChannel.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.Web, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.Web.2.0.0\lib\net45\Microsoft.AI.Web.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.WindowsServer, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.WindowsServer.2.0.0\lib\net45\Microsoft.AI.WindowsServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.ApplicationInsights, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.2.0.0\lib\net45\Microsoft.ApplicationInsights.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Data.Edm, Version=5.6.4.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Data.Edm.5.6.4\lib\net40\Microsoft.Data.Edm.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Data.OData, Version=5.6.4.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Data.OData.5.6.4\lib\net40\Microsoft.Data.OData.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Data.Services.Client, Version=5.6.4.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Data.Services.Client.5.6.4\lib\net40\Microsoft.Data.Services.Client.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.ServiceModel.Web" />
+    <Reference Include="System.Spatial, Version=5.6.4.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Spatial.5.6.4\lib\net40\System.Spatial.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Services" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Web" />
     <Reference Include="System.Web.Abstractions" />
@@ -205,27 +255,82 @@
     <Compile Include="Areas\HelpPage\SampleGeneration\SampleDirection.cs" />
     <Compile Include="Areas\HelpPage\SampleGeneration\TextSample.cs" />
     <Compile Include="Areas\HelpPage\XmlDocumentationProvider.cs" />
+    <Compile Include="Classes\CustomerDetails.cs" />
+    <Compile Include="Classes\PvDetails.cs" />
+    <Compile Include="Classes\VendorDetails.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ValuesController.cs" />
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\AccountBindingModels.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
+    <Compile Include="Models\UniversityModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
     <Compile Include="Providers\ApplicationOAuthProvider.cs" />
     <Compile Include="Results\ChallengeResult.cs" />
+    <Compile Include="Service References\OData\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.datasvcmap</DependentUpon>
+    </Compile>
     <Compile Include="Startup.cs" />
+    <Compile Include="Web References\fPASAXARPaymentJournalService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\fPASAXCustomerService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\fPASAXInvoiceJournalService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\fPASAXPaymentJournalService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\fPASAXVendorServices\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\IntegrationCodeunit\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="WSConfig.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Areas\HelpPage\HelpPage.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Default.aspx" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
+    <Content Include="Scripts\ai.0.22.9-build00167.js" />
+    <Content Include="Scripts\ai.0.22.9-build00167.min.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Areas\HelpPage\Views\Web.config" />
@@ -247,6 +352,14 @@
     <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\CollectionModelDescription.cshtml" />
     <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\ApiGroup.cshtml" />
     <Content Include="Areas\HelpPage\Views\Help\Api.cshtml" />
+    <Content Include="ApplicationInsights.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Include="Properties\PublishProfiles\fpas_api.pubxml" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -258,7 +371,123 @@
     <Content Include="Scripts\modernizr-2.6.2.js" />
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
-    <Content Include="Web.config" />
+    <None Include="Service References\OData\Reference.datasvcmap">
+      <Generator>DataServicesCoreClientGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <Content Include="Web References\fPASAXARPaymentJournalService\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </Content>
+    <None Include="Web References\fPASAXARPaymentJournalService\RoutingService.wsdl" />
+    <None Include="Web References\fPASAXARPaymentJournalService\xppservice.disco" />
+    <Content Include="Web References\fPASAXCustomerService\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </Content>
+    <None Include="Web References\fPASAXARPaymentJournalService\xppservice.wsdl" />
+    <None Include="Web References\fPASAXARPaymentJournalService\xppservice.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\fPASAXARPaymentJournalService\xppservice0.wsdl" />
+    <None Include="Web References\fPASAXARPaymentJournalService\xppservice0.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\fPASAXARPaymentJournalService\xppservice1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\fPASAXARPaymentJournalService\xppservice2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\fPASAXARPaymentJournalService\xppservice3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\fPASAXARPaymentJournalService\xppservice4.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\fPASAXCustomerService\xppservice.disco" />
+    <Content Include="Web References\fPASAXInvoiceJournalService\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </Content>
+    <None Include="Web References\fPASAXInvoiceJournalService\xppservice.disco" />
+    <Content Include="Web References\fPASAXPaymentJournalService\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </Content>
+    <None Include="Web References\fPASAXPaymentJournalService\xppservice.disco" />
+    <Content Include="Web References\fPASAXVendorServices\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </Content>
+    <None Include="Web References\fPASAXCustomerService\RoutingService.wsdl" />
+    <None Include="Web References\fPASAXCustomerService\xppservice.wsdl" />
+    <None Include="Web References\fPASAXCustomerService\xppservice.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\fPASAXCustomerService\xppservice0.wsdl" />
+    <None Include="Web References\fPASAXCustomerService\xppservice0.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\fPASAXCustomerService\xppservice1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\fPASAXCustomerService\xppservice2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\fPASAXCustomerService\xppservice3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\fPASAXCustomerService\xppservice4.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\fPASAXInvoiceJournalService\RoutingService.wsdl" />
+    <None Include="Web References\fPASAXInvoiceJournalService\xppservice.wsdl" />
+    <None Include="Web References\fPASAXInvoiceJournalService\xppservice.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\fPASAXInvoiceJournalService\xppservice0.wsdl" />
+    <None Include="Web References\fPASAXInvoiceJournalService\xppservice0.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\fPASAXInvoiceJournalService\xppservice1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\fPASAXInvoiceJournalService\xppservice2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\fPASAXInvoiceJournalService\xppservice3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\fPASAXInvoiceJournalService\xppservice4.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\fPASAXPaymentJournalService\RoutingService.wsdl" />
+    <None Include="Web References\fPASAXPaymentJournalService\xppservice.wsdl" />
+    <None Include="Web References\fPASAXPaymentJournalService\xppservice.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\fPASAXPaymentJournalService\xppservice0.wsdl" />
+    <None Include="Web References\fPASAXPaymentJournalService\xppservice0.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\fPASAXPaymentJournalService\xppservice1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\fPASAXPaymentJournalService\xppservice2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\fPASAXPaymentJournalService\xppservice3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\fPASAXPaymentJournalService\xppservice4.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\fPASAXVendorServices\RoutingService.wsdl" />
+    <None Include="Web References\fPASAXVendorServices\xppservice.disco" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
@@ -273,6 +502,32 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
+    <None Include="Service References\OData\service.edmx" />
+    <None Include="Web References\fPASAXVendorServices\xppservice.wsdl" />
+    <None Include="Web References\fPASAXVendorServices\xppservice.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\fPASAXVendorServices\xppservice0.wsdl" />
+    <None Include="Web References\fPASAXVendorServices\xppservice0.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\fPASAXVendorServices\xppservice1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\fPASAXVendorServices\xppservice2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\fPASAXVendorServices\xppservice3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\fPASAXVendorServices\xppservice4.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\IntegrationCodeunit\CICIntegrations.wsdl" />
+    <None Include="Web References\IntegrationCodeunit\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -284,6 +539,85 @@
     <Content Include="packages.config" />
     <None Include="Project_Readme.html" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferences Include="Web References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ServiceReferenceMetadataStorage Include="Service References\OData\">
+      <Type>datasvcmap</Type>
+    </ServiceReferenceMetadataStorage>
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferenceUrl Include="http://erptest.cicdom.local/MicrosoftDynamicsAXAif60/CICFPASVendorCreation/xppservice.svc">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\fPASAXVendorServices\</RelPath>
+      <UpdateFromURL>http://erptest.cicdom.local/MicrosoftDynamicsAXAif60/CICFPASVendorCreation/xppservice.svc</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>_CICWEBIntegration_ERPFPASTEst_RoutingService</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://erptest/MicrosoftDynamicsAXAif60/CICFPASAPInvoiceJournal/xppservice.svc">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\fPASAXInvoiceJournalService\</RelPath>
+      <UpdateFromURL>http://erptest/MicrosoftDynamicsAXAif60/CICFPASAPInvoiceJournal/xppservice.svc</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>_CICWEBIntegration_fPASAXInvoiceJournalService_RoutingService</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://erptest/MicrosoftDynamicsAXAif60/CICFPASAPPaymentJournal/xppservice.svc">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\fPASAXPaymentJournalService\</RelPath>
+      <UpdateFromURL>http://erptest/MicrosoftDynamicsAXAif60/CICFPASAPPaymentJournal/xppservice.svc</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>_CICWEBIntegration_fPASAXPaymentJournalService_RoutingService</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://erptest/MicrosoftDynamicsAXAif60/CICFPASARPaymentJournal/xppservice.svc">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\fPASAXARPaymentJournalService\</RelPath>
+      <UpdateFromURL>http://erptest/MicrosoftDynamicsAXAif60/CICFPASARPaymentJournal/xppservice.svc</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>_CICWEBIntegration_fPASAXARPaymentJournalService_RoutingService</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://erptest/MicrosoftDynamicsAXAif60/CICFPASCustomerCreation/xppservice.svc">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\fPASAXCustomerService\</RelPath>
+      <UpdateFromURL>http://erptest/MicrosoftDynamicsAXAif60/CICFPASCustomerCreation/xppservice.svc</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>_CICWEBIntegration_fPASAXCustomerService_RoutingService</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://192.168.0.15:4052/CICTEST/WS/CIC%2520JIPANGE%2520PENSION%2520PLAN/Codeunit/CICIntegrations">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\IntegrationCodeunit\</RelPath>
+      <UpdateFromURL>http://192.168.0.15:4052/CICTEST/WS/CIC%2520JIPANGE%2520PENSION%2520PLAN/Codeunit/CICIntegrations</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>_CICWEBIntegration_IntegrationCodeunit_CICIntegrations</CachedSettingsPropName>
+    </WebReferenceUrl>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

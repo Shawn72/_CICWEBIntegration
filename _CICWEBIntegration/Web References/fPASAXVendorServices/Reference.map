@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DiscoveryClientResultsFile xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Results>
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.ContractReference" url="http://erptest.cicdom.local/MicrosoftDynamicsAXAif60/CICFPASVendorCreation/xppservice.svc?wsdl=wsdl1" filename="xppservice.wsdl" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.ContractReference" url="http://erptest.cicdom.local/MicrosoftDynamicsAXAif60/CICFPASVendorCreation/xppservice.svc?wsdl=wsdl0" filename="xppservice0.wsdl" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://erptest.cicdom.local/MicrosoftDynamicsAXAif60/CICFPASVendorCreation/xppservice.svc?xsd=xsd0" filename="xppservice.xsd" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://erptest.cicdom.local/MicrosoftDynamicsAXAif60/CICFPASVendorCreation/xppservice.svc?xsd=xsd3" filename="xppservice0.xsd" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://erptest.cicdom.local/MicrosoftDynamicsAXAif60/CICFPASVendorCreation/xppservice.svc?xsd=xsd2" filename="xppservice1.xsd" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://erptest.cicdom.local/MicrosoftDynamicsAXAif60/CICFPASVendorCreation/xppservice.svc?xsd=xsd5" filename="xppservice2.xsd" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.DiscoveryDocumentReference" url="http://erptest.cicdom.local/MicrosoftDynamicsAXAif60/CICFPASVendorCreation/xppservice.svc?disco" filename="xppservice.disco" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://erptest.cicdom.local/MicrosoftDynamicsAXAif60/CICFPASVendorCreation/xppservice.svc?xsd=xsd4" filename="xppservice3.xsd" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://erptest.cicdom.local/MicrosoftDynamicsAXAif60/CICFPASVendorCreation/xppservice.svc?xsd=xsd1" filename="xppservice4.xsd" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.ContractReference" url="http://erptest.cicdom.local/MicrosoftDynamicsAXAif60/CICFPASVendorCreation/xppservice.svc?wsdl" filename="RoutingService.wsdl" />
+  </Results>
+</DiscoveryClientResultsFile>

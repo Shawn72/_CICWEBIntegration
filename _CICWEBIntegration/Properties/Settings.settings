@@ -1,0 +1,27 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="_CICWEBIntegration.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="_CICWEBIntegration_IntegrationCodeunit_CICIntegrations" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://192.168.0.15:4052/CICTEST/WS/CIC%20JIPANGE%20PENSION%20PLAN/Codeunit/CICIntegrations</Value>
+    </Setting>
+    <Setting Name="_CICWEBIntegration_ERPFPASTEst_RoutingService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://erptest.cicdom.local/MicrosoftDynamicsAXAif60/CICFPASVendorCreation/xppservice.svc</Value>
+    </Setting>
+    <Setting Name="_CICWEBIntegration_DBSLServerFPas_Service1" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">http://localhost:7777/Service.svc</Value>
+    </Setting>
+    <Setting Name="_CICWEBIntegration_fPASAXCustomerService_RoutingService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://erptest.cicdom.local/MicrosoftDynamicsAXAif60/CICFPASCustomerCreation/xppservice.svc</Value>
+    </Setting>
+    <Setting Name="_CICWEBIntegration_fPASAXInvoiceJournalService_RoutingService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://erptest.cicdom.local/MicrosoftDynamicsAXAif60/CICFPASAPInvoiceJournal/xppservice.svc</Value>
+    </Setting>
+    <Setting Name="_CICWEBIntegration_fPASAXPaymentJournalService_RoutingService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://erptest.cicdom.local/MicrosoftDynamicsAXAif60/CICFPASAPPaymentJournal/xppservice.svc</Value>
+    </Setting>
+    <Setting Name="_CICWEBIntegration_fPASAXARPaymentJournalService_RoutingService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://erptest.cicdom.local/MicrosoftDynamicsAXAif60/CICFPASARPaymentJournal/xppservice.svc</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

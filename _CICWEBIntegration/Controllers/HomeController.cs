@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
-
 namespace _CICWEBIntegration.Controllers
 {
     public class HomeController : Controller
@@ -12,6 +11,11 @@ namespace _CICWEBIntegration.Controllers
         {
             ViewBag.Title = "Home Page";
 
+            return View();
+        }
+
+        public ActionResult FindCustomer()
+        {
             return View();
         }
     }

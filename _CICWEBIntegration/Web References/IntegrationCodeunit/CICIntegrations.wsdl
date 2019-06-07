@@ -1,0 +1,553 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:tns="urn:microsoft-dynamics-schemas/codeunit/CICIntegrations" targetNamespace="urn:microsoft-dynamics-schemas/codeunit/CICIntegrations" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <schema elementFormDefault="qualified" targetNamespace="urn:microsoft-dynamics-schemas/codeunit/CICIntegrations" xmlns="http://www.w3.org/2001/XMLSchema">
+      <element name="FnSendVendorConfirmationDetails">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="pin" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="customerGroup" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="iDnumber" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="FnSendVendorConfirmationDetails_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="FnCreateNavVendor">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="accountNo" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="fullname" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="gender" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="maritalstatus" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="county" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="phonenumber" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="email" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="idnumber" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="bankaccountno" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="bankaccountid" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="krapin" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="vendorgroup" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="globaldimension1" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="globaldimension2" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="address" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="vendortype" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="FnCreateNavVendor_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="boolean" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="FnPushVendorrDetails">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="accountNo" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="firstname" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="middlename" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="lastname" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="gender" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="maritalstatus" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="country" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="zipcode" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="phonenumber" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="email" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="idnumber" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="bankaccountno" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="bankaccountid" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="krapin" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="vendorgroup" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="vendortype" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="FnPushVendorrDetails_Result">
+        <complexType>
+          <sequence />
+        </complexType>
+      </element>
+      <element name="FnFindVendorfromNav">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="kRApin" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="FnFindVendorfromNav_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="FnTestfindVendor">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="kRApin" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="FnTestfindVendor_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="FnGetVendorName">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="kRApin" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="FnGetVendorName_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="FnGetAllVendorDetails">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="kRApin" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="FnGetAllVendorDetails_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="FnPushVendortoStageTest">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="kRAPin" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="FnPushVendortoStageTest_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="boolean" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="FnTestCreateVendor">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="kRApin" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="FnTestCreateVendor_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="FnFindVendorfromAX">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="kRApin" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="vendorGroup" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="idNumber" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="FnFindVendorfromAX_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="FnFindCreateVendorOnAX">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="kRApin" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="FnFindCreateVendorOnAX_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="FnFindCreateCustomerOnAX">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="kRApin" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="FnFindCreateCustomerOnAX_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="FnPostPaymentJournalOnAX">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="journalType" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="tranxTime" type="date" />
+            <element minOccurs="1" maxOccurs="1" name="ledgerAccount" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="dimensions" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="invoice" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="description" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="amountDebit" type="decimal" />
+            <element minOccurs="1" maxOccurs="1" name="amountCredit" type="decimal" />
+            <element minOccurs="1" maxOccurs="1" name="offsetAccount" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="offsetDimensions" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="methodofPayment" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="FnPostPaymentJournalOnAX_Result">
+        <complexType>
+          <sequence />
+        </complexType>
+      </element>
+      <element name="FnGetCustomerDetailsfromNav">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="kRApin" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="FnGetCustomerDetailsfromNav_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="FnReturnPaymentJournalDetails">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="pVNumber" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="journalType" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="FnReturnPaymentJournalDetails_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+    </schema>
+  </types>
+  <message name="FnSendVendorConfirmationDetails">
+    <part name="parameters" element="tns:FnSendVendorConfirmationDetails" />
+  </message>
+  <message name="FnSendVendorConfirmationDetails_Result">
+    <part name="parameters" element="tns:FnSendVendorConfirmationDetails_Result" />
+  </message>
+  <message name="FnCreateNavVendor">
+    <part name="parameters" element="tns:FnCreateNavVendor" />
+  </message>
+  <message name="FnCreateNavVendor_Result">
+    <part name="parameters" element="tns:FnCreateNavVendor_Result" />
+  </message>
+  <message name="FnPushVendorrDetails">
+    <part name="parameters" element="tns:FnPushVendorrDetails" />
+  </message>
+  <message name="FnPushVendorrDetails_Result">
+    <part name="parameters" element="tns:FnPushVendorrDetails_Result" />
+  </message>
+  <message name="FnFindVendorfromNav">
+    <part name="parameters" element="tns:FnFindVendorfromNav" />
+  </message>
+  <message name="FnFindVendorfromNav_Result">
+    <part name="parameters" element="tns:FnFindVendorfromNav_Result" />
+  </message>
+  <message name="FnTestfindVendor">
+    <part name="parameters" element="tns:FnTestfindVendor" />
+  </message>
+  <message name="FnTestfindVendor_Result">
+    <part name="parameters" element="tns:FnTestfindVendor_Result" />
+  </message>
+  <message name="FnGetVendorName">
+    <part name="parameters" element="tns:FnGetVendorName" />
+  </message>
+  <message name="FnGetVendorName_Result">
+    <part name="parameters" element="tns:FnGetVendorName_Result" />
+  </message>
+  <message name="FnGetAllVendorDetails">
+    <part name="parameters" element="tns:FnGetAllVendorDetails" />
+  </message>
+  <message name="FnGetAllVendorDetails_Result">
+    <part name="parameters" element="tns:FnGetAllVendorDetails_Result" />
+  </message>
+  <message name="FnPushVendortoStageTest">
+    <part name="parameters" element="tns:FnPushVendortoStageTest" />
+  </message>
+  <message name="FnPushVendortoStageTest_Result">
+    <part name="parameters" element="tns:FnPushVendortoStageTest_Result" />
+  </message>
+  <message name="FnTestCreateVendor">
+    <part name="parameters" element="tns:FnTestCreateVendor" />
+  </message>
+  <message name="FnTestCreateVendor_Result">
+    <part name="parameters" element="tns:FnTestCreateVendor_Result" />
+  </message>
+  <message name="FnFindVendorfromAX">
+    <part name="parameters" element="tns:FnFindVendorfromAX" />
+  </message>
+  <message name="FnFindVendorfromAX_Result">
+    <part name="parameters" element="tns:FnFindVendorfromAX_Result" />
+  </message>
+  <message name="FnFindCreateVendorOnAX">
+    <part name="parameters" element="tns:FnFindCreateVendorOnAX" />
+  </message>
+  <message name="FnFindCreateVendorOnAX_Result">
+    <part name="parameters" element="tns:FnFindCreateVendorOnAX_Result" />
+  </message>
+  <message name="FnFindCreateCustomerOnAX">
+    <part name="parameters" element="tns:FnFindCreateCustomerOnAX" />
+  </message>
+  <message name="FnFindCreateCustomerOnAX_Result">
+    <part name="parameters" element="tns:FnFindCreateCustomerOnAX_Result" />
+  </message>
+  <message name="FnPostPaymentJournalOnAX">
+    <part name="parameters" element="tns:FnPostPaymentJournalOnAX" />
+  </message>
+  <message name="FnPostPaymentJournalOnAX_Result">
+    <part name="parameters" element="tns:FnPostPaymentJournalOnAX_Result" />
+  </message>
+  <message name="FnGetCustomerDetailsfromNav">
+    <part name="parameters" element="tns:FnGetCustomerDetailsfromNav" />
+  </message>
+  <message name="FnGetCustomerDetailsfromNav_Result">
+    <part name="parameters" element="tns:FnGetCustomerDetailsfromNav_Result" />
+  </message>
+  <message name="FnReturnPaymentJournalDetails">
+    <part name="parameters" element="tns:FnReturnPaymentJournalDetails" />
+  </message>
+  <message name="FnReturnPaymentJournalDetails_Result">
+    <part name="parameters" element="tns:FnReturnPaymentJournalDetails_Result" />
+  </message>
+  <portType name="CICIntegrations_Port">
+    <operation name="FnSendVendorConfirmationDetails">
+      <input name="FnSendVendorConfirmationDetails" message="tns:FnSendVendorConfirmationDetails" />
+      <output name="FnSendVendorConfirmationDetails_Result" message="tns:FnSendVendorConfirmationDetails_Result" />
+    </operation>
+    <operation name="FnCreateNavVendor">
+      <input name="FnCreateNavVendor" message="tns:FnCreateNavVendor" />
+      <output name="FnCreateNavVendor_Result" message="tns:FnCreateNavVendor_Result" />
+    </operation>
+    <operation name="FnPushVendorrDetails">
+      <input name="FnPushVendorrDetails" message="tns:FnPushVendorrDetails" />
+      <output name="FnPushVendorrDetails_Result" message="tns:FnPushVendorrDetails_Result" />
+    </operation>
+    <operation name="FnFindVendorfromNav">
+      <input name="FnFindVendorfromNav" message="tns:FnFindVendorfromNav" />
+      <output name="FnFindVendorfromNav_Result" message="tns:FnFindVendorfromNav_Result" />
+    </operation>
+    <operation name="FnTestfindVendor">
+      <input name="FnTestfindVendor" message="tns:FnTestfindVendor" />
+      <output name="FnTestfindVendor_Result" message="tns:FnTestfindVendor_Result" />
+    </operation>
+    <operation name="FnGetVendorName">
+      <input name="FnGetVendorName" message="tns:FnGetVendorName" />
+      <output name="FnGetVendorName_Result" message="tns:FnGetVendorName_Result" />
+    </operation>
+    <operation name="FnGetAllVendorDetails">
+      <input name="FnGetAllVendorDetails" message="tns:FnGetAllVendorDetails" />
+      <output name="FnGetAllVendorDetails_Result" message="tns:FnGetAllVendorDetails_Result" />
+    </operation>
+    <operation name="FnPushVendortoStageTest">
+      <input name="FnPushVendortoStageTest" message="tns:FnPushVendortoStageTest" />
+      <output name="FnPushVendortoStageTest_Result" message="tns:FnPushVendortoStageTest_Result" />
+    </operation>
+    <operation name="FnTestCreateVendor">
+      <input name="FnTestCreateVendor" message="tns:FnTestCreateVendor" />
+      <output name="FnTestCreateVendor_Result" message="tns:FnTestCreateVendor_Result" />
+    </operation>
+    <operation name="FnFindVendorfromAX">
+      <input name="FnFindVendorfromAX" message="tns:FnFindVendorfromAX" />
+      <output name="FnFindVendorfromAX_Result" message="tns:FnFindVendorfromAX_Result" />
+    </operation>
+    <operation name="FnFindCreateVendorOnAX">
+      <input name="FnFindCreateVendorOnAX" message="tns:FnFindCreateVendorOnAX" />
+      <output name="FnFindCreateVendorOnAX_Result" message="tns:FnFindCreateVendorOnAX_Result" />
+    </operation>
+    <operation name="FnFindCreateCustomerOnAX">
+      <input name="FnFindCreateCustomerOnAX" message="tns:FnFindCreateCustomerOnAX" />
+      <output name="FnFindCreateCustomerOnAX_Result" message="tns:FnFindCreateCustomerOnAX_Result" />
+    </operation>
+    <operation name="FnPostPaymentJournalOnAX">
+      <input name="FnPostPaymentJournalOnAX" message="tns:FnPostPaymentJournalOnAX" />
+      <output name="FnPostPaymentJournalOnAX_Result" message="tns:FnPostPaymentJournalOnAX_Result" />
+    </operation>
+    <operation name="FnGetCustomerDetailsfromNav">
+      <input name="FnGetCustomerDetailsfromNav" message="tns:FnGetCustomerDetailsfromNav" />
+      <output name="FnGetCustomerDetailsfromNav_Result" message="tns:FnGetCustomerDetailsfromNav_Result" />
+    </operation>
+    <operation name="FnReturnPaymentJournalDetails">
+      <input name="FnReturnPaymentJournalDetails" message="tns:FnReturnPaymentJournalDetails" />
+      <output name="FnReturnPaymentJournalDetails_Result" message="tns:FnReturnPaymentJournalDetails_Result" />
+    </operation>
+  </portType>
+  <binding name="CICIntegrations_Binding" type="tns:CICIntegrations_Port">
+    <binding transport="http://schemas.xmlsoap.org/soap/http" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+    <operation name="FnSendVendorConfirmationDetails">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/CICIntegrations:FnSendVendorConfirmationDetails" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="FnSendVendorConfirmationDetails">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="FnSendVendorConfirmationDetails_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="FnCreateNavVendor">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/CICIntegrations:FnCreateNavVendor" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="FnCreateNavVendor">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="FnCreateNavVendor_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="FnPushVendorrDetails">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/CICIntegrations:FnPushVendorrDetails" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="FnPushVendorrDetails">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="FnPushVendorrDetails_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="FnFindVendorfromNav">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/CICIntegrations:FnFindVendorfromNav" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="FnFindVendorfromNav">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="FnFindVendorfromNav_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="FnTestfindVendor">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/CICIntegrations:FnTestfindVendor" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="FnTestfindVendor">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="FnTestfindVendor_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="FnGetVendorName">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/CICIntegrations:FnGetVendorName" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="FnGetVendorName">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="FnGetVendorName_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="FnGetAllVendorDetails">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/CICIntegrations:FnGetAllVendorDetails" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="FnGetAllVendorDetails">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="FnGetAllVendorDetails_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="FnPushVendortoStageTest">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/CICIntegrations:FnPushVendortoStageTest" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="FnPushVendortoStageTest">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="FnPushVendortoStageTest_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="FnTestCreateVendor">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/CICIntegrations:FnTestCreateVendor" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="FnTestCreateVendor">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="FnTestCreateVendor_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="FnFindVendorfromAX">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/CICIntegrations:FnFindVendorfromAX" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="FnFindVendorfromAX">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="FnFindVendorfromAX_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="FnFindCreateVendorOnAX">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/CICIntegrations:FnFindCreateVendorOnAX" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="FnFindCreateVendorOnAX">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="FnFindCreateVendorOnAX_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="FnFindCreateCustomerOnAX">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/CICIntegrations:FnFindCreateCustomerOnAX" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="FnFindCreateCustomerOnAX">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="FnFindCreateCustomerOnAX_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="FnPostPaymentJournalOnAX">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/CICIntegrations:FnPostPaymentJournalOnAX" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="FnPostPaymentJournalOnAX">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="FnPostPaymentJournalOnAX_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="FnGetCustomerDetailsfromNav">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/CICIntegrations:FnGetCustomerDetailsfromNav" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="FnGetCustomerDetailsfromNav">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="FnGetCustomerDetailsfromNav_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="FnReturnPaymentJournalDetails">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/CICIntegrations:FnReturnPaymentJournalDetails" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="FnReturnPaymentJournalDetails">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="FnReturnPaymentJournalDetails_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+  </binding>
+  <service name="CICIntegrations">
+    <port name="CICIntegrations_Port" binding="tns:CICIntegrations_Binding">
+      <address location="http://192.168.0.15:4052/CICTEST/WS/CIC%20JIPANGE%20PENSION%20PLAN/Codeunit/CICIntegrations" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+    </port>
+  </service>
+</definitions>

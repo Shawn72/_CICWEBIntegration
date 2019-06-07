@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org" elementFormDefault="qualified" targetNamespace="http://tempuri.org" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="CICFPASVendorCreationServiceUpdateVendorRequest">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="krapin" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="vendgroup" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Id" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="accountNum" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="firstname" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="postalstreet" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="phone" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="email" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="fax" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="url" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="bankcode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="bankaccnum" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="bankbranchcode" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CICFPASVendorCreationServiceUpdateVendorResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="response" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CICFPASVendorCreationServiceFindVendorRequest">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="krapin" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="vendgroup" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="id" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CICFPASVendorCreationServiceFindVendorResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="response" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CICFPASVendorCreationServiceCreateNewVendorRequest">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="accountNum" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="recordtype" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="firstname" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="physicalstreet" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="zipcode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="phone" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="email" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="taxWithholdCalculate" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="contractStatus" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="krapin" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="postalstreet" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="fax" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="url" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="vendgroup" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Id" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="bankcode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="bankaccnum" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="bankbranchcode" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CICFPASVendorCreationServiceCreateNewVendorResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="response" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
